@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/vivado_project/cpu_part/cpu_part.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/vivado_project/cpu_part/cpu_part.srcs/sim_1/new/cpu_part_tb.v,1693324441,verilog,,,,cpu_part_tb,,,,,,,,
+D:/vivado_project/cpu_part/cpu_part.srcs/sources_1/new/cpu_part.v,1693324387,verilog,,D:/vivado_project/cpu_part/cpu_part.srcs/sim_1/new/cpu_part_tb.v,,RAM;ROM;cpu_part;is_stall;judge_is_jmp;mux2_1;pc_plus4,,,,,,,,
