@@ -78,7 +78,7 @@ function judge(input [2:0]branch_m, input [1:0]zero_m);
                         judge=1'b1;
                     end
                 end
-          3'b011: begin
+          3'b100: begin
                     if (zero_m==2'b01) begin
                         judge=1'b1;
                     end
@@ -89,6 +89,9 @@ function judge(input [2:0]branch_m, input [1:0]zero_m);
                         judge=1'b0;
                     end
                 end
+           3'b101:begin
+                    judge=1'b1;
+                  end
            default: judge=1'b0;         
     endcase
 endfunction
@@ -147,13 +150,13 @@ endmodule
 module ROM(
     input clk,
     input rst,
-    input  [4:0]rom_addr,
+    input  [31:0]rom_addr,
     output [31:0]rom_rd
     );
     reg [31:0] memory[31:0];
     
     initial begin
-		$readmemh("path",memory);
+		$readmemh("test_version5.txt",memory);
 	end
     assign  rom_rd=memory[rom_addr];
     
@@ -166,10 +169,22 @@ endmodule
 
 module pc_plus4(
     input [31:0] pc,
+    input PC_stall,
     output [31:0] out
 );
 
-assign out=pc+5'b00001;
+
+assign out=outs(pc,PC_stall);
+
+function [31:0]outs(input [31:0] pc, input PC_stall);
+case(PC_stall)
+       1'b0: outs=pc+32'b00001;
+       1'b1: outs=pc;
+endcase
+
+
+endfunction
+//assign out=pc+32'b00001;
 
 endmodule
 
@@ -203,11 +218,17 @@ endmodule
 module pc_plus(
     input [31:0] pc,
     input [31:0] jmp,
+    input [2:0] branch_e,
     output [31:0] out
 );
+assign out=outs(pc,jmp,branch_e);
 
-assign out=pc+jmp;
-
+function [31:0]outs(input [31:0] pc, input[31:0] jmp ,input [2:0]branch_e);
+case(branch_e)
+       3'b101: outs={24'b0,pc[7:0]};
+       default:outs=pc+jmp;
+endcase
+endfunction
 endmodule
 
 
@@ -216,15 +237,18 @@ endmodule
 module PC(
     input [31:0]pc_in,
     input clk,
-    input PC_stall,
+//    input PC_stall,
     output [31:0]pc_out
 );
 reg [31:0] pc;
 assign pc_out=pc;
+initial begin
+    pc<=32'b0;
+end
 always@(posedge clk) begin
-        if (PC_stall==1'b0) begin
+//        if (PC_stall==1'b0) begin
             pc=pc_in;
-        end
+//        end
      end
 endmodule
 

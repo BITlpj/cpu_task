@@ -25,11 +25,12 @@ include M_W.v;
 include ALU.v;
 include cpu_part.v;
 include control.v;
-include reg_file.v;
+include regfile.v;
 include signextend.v;
 
 module cpu(
-
+    input clk,
+    input rst
     );
 
 wire clk;
@@ -39,7 +40,7 @@ wire [31:0]PC_plus4_f;
 wire is_jmp;
 wire [31:0]pc_in;
 
-wire [4:0] rom_addr;
+wire [31:0] rom_addr;
 wire [31:0] rom_rd;
 
 wire [4:0] ram_addr;
@@ -48,7 +49,7 @@ wire [31:0] ram_wd;
 wire ram_we;
 
 
-wire [1:0]number_of_stall;
+//wire [1:0]number_of_stall;
 
 wire [5:0]op;
 wire [5:0]func;
@@ -117,11 +118,12 @@ wire alu_src_e;
 wire reg_dst_e;
 wire [31:0]rd1_e;
 wire [31:0]rd2_e;
+wire [31:0]PC_plus4_d;
 
 
 /*第三个寄存器相关*/
 wire [4:0]write_reg_e;
-wire [2:0]brach_m;
+wire [2:0]branch_m;
 wire reg_write_m;
 wire mem_to_reg_m;
 wire mem_write_m;
@@ -136,6 +138,7 @@ wire reg_write_w;
 wire [31:0] result_w;
 wire [4:0]write_reg_w;
 
+wire [31:0]result_m;
 ROM rom(
     .rom_addr(rom_addr),
     .rom_rd(rom_rd),
@@ -155,22 +158,24 @@ PC cpu_pc(
     .clk(clk),
     .pc_in(pc_in),
     .pc_out(rom_addr)
+//    .PC_stall(PC_stall)
 );
 
 pc_plus4 pc_plus(
     .pc(rom_addr),
-    .out(PC_plus4_f)    
+    .out(PC_plus4_f),    
+    .PC_stall(PC_stall)
 );
 
-is_stall cpu_is_stall(
-    .opcode(op),
-    .number_of_stall(number_of_stall)
-);
+//is_stall cpu_is_stall(
+//    .opcode(op),
+//    .number_of_stall(number_of_stall)
+//);
 
 F_D f_d(
     .clk(clk),
     .reset(rst),
-    .number_of_stall(number_of_stall),
+//   .number_of_stall(number_of_stall),
     .instr(rom_rd),
     .PC_plus4_f(PC_plus4_f),
     
@@ -200,7 +205,7 @@ control cpu_control(
 
 regfile cpu_regfile(
     .clk(clk),
-	.reset(reset),
+	.reset(rst),
 	.addr1(addr1),
 	.addr2(addr2),
 	.addr3(write_reg_w), // write address
@@ -222,7 +227,7 @@ forwarding_unit cpu_forwarding_unit(
     .reg_write_m(reg_write_m),
     .write_reg_e(write_reg_e),
     .write_reg_m(write_reg_m),
-    .alu_out_m(alu_out_m),
+    .alu_out_e(alu_out_e),
     .result_m(result_m),
     
     .rd1(rd1_src1),
@@ -255,15 +260,15 @@ mux2_1_5 mux_choose_reg_write(
 
 
 mux2_1_32 mux_choose_alu_src(
-    .src1(imm_e),
-    .src2(rd2_e),
+    .src1(rd2_e),
+    .src2(imm_e),
     .select(alu_src_e),
     .out(alu_src2)
 );
 
 ALU cpu_alu(
     .control(alu_control_e),
-    .alu_num1(rd2_e),
+    .alu_num1(rd1_e),
     .alu_num2(alu_src2),
     
     .ans(alu_out_e),
@@ -272,6 +277,7 @@ ALU cpu_alu(
 
 pc_plus pc_plus_jmp(
     .pc(imm_e),
+    .branch_e(branch_e),
     .jmp(PC_plus4_e),
     .out(pc_jmp_out)
 );
@@ -287,7 +293,7 @@ RAM ram(
 
 judge_is_jmp  cpu_judge_is_jmp(
    .branch_m(branch_m),
-    .zero_m(zero_m),
+    .zero_m(zero),
     .is_jmp(is_jmp)
 );
 
@@ -340,9 +346,9 @@ E_M e_m(
      .zero_e(zero),//[1:0]
      .alu_out_e(alu_out_e),//[31:0]
      .write_reg_e(write_reg_e),//[4:0]
-     .write_data_e(write_data_e),//[31:0]
+     .write_data_e(rd2_e),//[31:0]
      
-     .PC_brach_e(PC_brach_e),//[31:0]
+     .PC_branch_e(pc_jmp_out),//[31:0]
      
      .branch_m(branch_m),//[2:0]
      .reg_write_m(reg_write_m),
@@ -352,7 +358,7 @@ E_M e_m(
      .alu_out_m(alu_out_m),//[31:0]
      .write_reg_m(write_reg_m),//[4:0]
      .write_data_m(write_data_m),//[31:0]
-     .PC_brach_m(PC_brach_m)//[31:0]
+     .PC_branch_m(PC_branch_m)//[31:0]
     );
     
 M_W m_w(

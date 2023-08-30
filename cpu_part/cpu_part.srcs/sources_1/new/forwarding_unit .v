@@ -7,7 +7,7 @@ module forwarding_unit(
     input reg_write_m,
     input [4:0]write_reg_e,
     input [4:0]write_reg_m,
-    input [31:0]alu_out_m,
+    input [31:0]alu_out_e,
     input [31:0]result_m,
     
     output [31:0]rd1,
@@ -22,7 +22,7 @@ input reg_write_e;
 input reg_write_m;
 input [4:0]write_reg_e;
 input [4:0]write_reg_m;
-input [31:0]alu_out_m;
+input [31:0]alu_out_e;
 input [31:0]result_m;
 begin
     rd_cal[64] = 0;
@@ -30,38 +30,42 @@ begin
 
     case(reg_write_e)
     1'b1:begin
-        if(write_reg_e==addr2)
-            rd_cal[31:0] = alu_out_m;
+        if(write_reg_e==addr2)begin
+            rd_cal[31:0] = alu_out_e;
             rd_cal[64] = 1;
+        end
     end
     endcase
     
     case(reg_write_m)
     1'b1:begin
-        if(write_reg_m==addr2)
+        if(write_reg_m==addr2)begin
             rd_cal[31:0] = result_m;
             rd_cal[64] = 1;
+        end
     end
     endcase
     
     case(reg_write_e)
     1'b1:begin
-        if(write_reg_e==addr1)
-            rd_cal[63:32] = alu_out_m;
+        if(write_reg_e==addr1)begin
+            rd_cal[63:32] = alu_out_e;
             rd_cal[65] = 1;
+        end
     end
     endcase
     
     case(reg_write_m)
     1'b1:begin
-        if(write_reg_m==addr1)
+        if(write_reg_m==addr1)begin
             rd_cal[63:32] = result_m;
             rd_cal[65] = 1;
+        end
     end
     endcase
 end
 endfunction
 
-assign {choose1,choose2,rd1,rd2} = rd_cal(addr1,addr2,reg_write_e,reg_write_m,write_reg_e,write_reg_m,alu_out_m,result_m);
+assign {choose1,choose2,rd1,rd2} = rd_cal(addr1,addr2,reg_write_e,reg_write_m,write_reg_e,write_reg_m,alu_out_e,result_m);
 
 endmodule

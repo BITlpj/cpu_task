@@ -31,7 +31,7 @@ module E_M(
     input wire [31:0]alu_out_e,
     input wire [4:0]write_reg_e,
     input wire [31:0]write_data_e,
-    input wire [31:0]PC_brach_e,
+    input wire [31:0]PC_branch_e,
     output reg [2:0]branch_m,
     output reg reg_write_m,
     output reg mem_to_reg_m,
@@ -40,7 +40,7 @@ module E_M(
     output reg [31:0]alu_out_m,
     output reg [4:0]write_reg_m,
     output reg [31:0]write_data_m,
-    output reg [31:0]PC_brach_m
+    output reg [31:0]PC_branch_m
     );
     initial begin
         branch_m <= 0;
@@ -51,7 +51,7 @@ module E_M(
         alu_out_m <= 0;
         write_reg_m <= 0;
         write_data_m <= 0;
-        PC_brach_m <= 0;
+        PC_branch_m <= 0;
     end
     always@(posedge clk or posedge reset) begin
         if(reset) begin
@@ -63,7 +63,7 @@ module E_M(
             alu_out_m <= 0;
             write_reg_m <= 0;
             write_data_m <= 0;
-            PC_brach_m <= 0;
+            PC_branch_m <= 0;
         end
         else begin
             branch_m <= branch_e;
@@ -74,7 +74,7 @@ module E_M(
             alu_out_m <= alu_out_e;
             write_reg_m <= write_reg_e;
             write_data_m <= write_data_e;
-            PC_brach_m <= PC_brach_e;
+            PC_branch_m <= PC_branch_e;
         end
     end
 endmodule
