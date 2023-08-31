@@ -1,0 +1,17 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/thisyear/cpu_task/cpu/cpu.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sim_1/new/cpu_tb.v,1693466860,verilog,,,,cpu_tb,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/ALU.v,1693468668,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/D_E.v,,ALU,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/D_E.v,1693474055,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/E_M.v,,D_E,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/E_M.v,1693474054,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/F_D.v,,E_M,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/F_D.v,1693480749,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/M_W.v,,F_D,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/M_W.v,1693474052,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/control.v,,M_W,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/control.v,1693465137,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/cpu.v,,control,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/cpu.v,1693482342,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/cpu_part.v,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/D_E.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/E_M.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/F_D.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/M_W.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/ALU.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/cpu_part.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/control.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/regfile.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/signextend.v,cpu,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/cpu_part.v,1693472301,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/forwarding_unit .v,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/D_E.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/E_M.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/F_D.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/M_W.v;D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/ALU.v,PC;RAM;ROM;cpu_part;is_stall;judge_is_jmp;mux2_1_32;mux2_1_5;pc_plus;pc_plus4,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/forwarding_unit .v,1693479603,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/regfile.v,,forwarding_unit,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/regfile.v,1693363167,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/signextend.v,,regfile,,,,,,,,
+D:/thisyear/cpu_task/cpu/cpu.srcs/sources_1/new/signextend.v,1693363172,verilog,,D:/thisyear/cpu_task/cpu/cpu.srcs/sim_1/new/cpu_tb.v,,signextend,,,,,,,,
