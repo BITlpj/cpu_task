@@ -24,7 +24,8 @@ module cpu_tb(
     );
     reg reset;
     reg clk;
-    cpu test_cpu(.clk(clk),.rst(reset));
+    wire over;
+    cpu test_cpu(.clk(clk),.rst(reset),.over(over));
     initial begin
         reset = 1;
         clk = 1;

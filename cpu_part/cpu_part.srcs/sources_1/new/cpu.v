@@ -30,7 +30,8 @@ include signextend.v;
 
 module cpu(
     input clk,
-    input rst
+    input rst,
+    output over
     );
 
 wire clk;
@@ -139,6 +140,20 @@ wire [31:0] result_w;
 wire [4:0]write_reg_w;
 
 wire [31:0]result_m;
+
+wire over_flag;
+reg  over_flag_reg;
+
+initial begin
+    over_flag_reg=1'b0;
+end 
+
+always@(posedge over_flag) begin
+    over_flag_reg=over_flag;
+end
+
+assign over=over_flag_reg;
+
 ROM rom(
     .rom_addr(rom_addr),
     .rom_rd(rom_rd),
@@ -272,7 +287,8 @@ ALU cpu_alu(
     .alu_num2(alu_src2),
     
     .ans(alu_out_e),
-    .zero_m(zero)
+    .zero_m(zero),
+    .over(over_flag)
     );
 
 pc_plus pc_plus_jmp(
