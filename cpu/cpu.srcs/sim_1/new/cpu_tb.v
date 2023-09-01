@@ -67,7 +67,7 @@ module cpu_tb(
     
     
     
-    cpu test_cpu(
+    mycpu_top test_cpu(
        .clk(clk),
        .resetn(reset),
     

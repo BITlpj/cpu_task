@@ -37,17 +37,20 @@ module RAM(
     );
 
 
-    reg [31:0] memory[31:0];
+    reg [7:0] memory[127:0];
 
-    assign  data_sram_rdata=memory[data_sram_addr];
+    assign  data_sram_rdata={memory[data_sram_addr],memory[data_sram_addr+1],memory[data_sram_addr+2],memory[data_sram_addr+3]};
 
     integer i ;
     always @(negedge clk or posedge rst) begin
         if(rst) begin
-            for(i=0;i<=31;i=i+1) memory[i]=32'd0;
+            for(i=0;i<=127;i=i+1) memory[i]=32'd0;
         end       
         else if (data_sram_wen==4'b1111) begin
-            memory[data_sram_addr]=data_sram_wdata;
+            memory[data_sram_addr]  =data_sram_wdata[31:24];
+            memory[data_sram_addr+1]=data_sram_wdata[23:16];
+            memory[data_sram_addr+2]=data_sram_wdata[15:8];
+            memory[data_sram_addr+3]=data_sram_wdata[7:0];            
         end
     end
     
@@ -95,6 +98,12 @@ function judge(input [2:0]branch_m, input [1:0]zero_m);
            3'b101:begin
                     judge=1'b1;
                   end
+           3'b110:begin
+                    judge=1'b1;
+           end
+           3'b111:begin
+                    judge=1'b1;
+           end
            default: judge=1'b0;         
     endcase
 endfunction
@@ -159,12 +168,14 @@ module ROM(
     input [31:0] inst_sram_wdata,
     output [31:0] inst_sram_rdata
     );
-    reg [31:0] memory[31:0];
-    
+    reg [7:0] memory[127:0];
+    wire [31:0] addr;
+
     initial begin
-		$readmemh("test_version5.txt",memory);
+		$readmemh("test_cal_version1.txt",memory);
 	end
-    assign  inst_sram_rdata=memory[inst_sram_addr];
+    assign  addr=inst_sram_addr; 
+    assign  inst_sram_rdata={memory[addr],memory[addr+1],memory[addr+2],memory[addr+3]};
     
 endmodule
 
@@ -184,7 +195,7 @@ assign out=outs(pc,PC_stall);
 
 function [31:0]outs(input [31:0] pc, input PC_stall);
 case(PC_stall)
-       1'b0: outs=pc+32'b00001;
+       1'b0: outs=pc+32'b00100;
        1'b1: outs=pc;
 endcase
 
@@ -223,16 +234,28 @@ endmodule
 
 module pc_plus(
     input [31:0] pc,
-    input [31:0] jmp,
+    input [25:0] jmp,
+    input [31:0] rd1_e,
     input [2:0] branch_e,
     output [31:0] out
 );
 assign out=outs(pc,jmp,branch_e);
 
-function [31:0]outs(input [31:0] pc, input[31:0] jmp ,input [2:0]branch_e);
+function [31:0]outs(input [31:0] pc, input[25:0] jmp ,input [2:0]branch_e);
+
 case(branch_e)
-       3'b101: outs={24'b0,pc[7:0]};
-       default:outs=pc+jmp;
+       
+       3'b101: begin
+       outs={22'b0,jmp[7:0],2'b0};
+//            outs={pc[31:28],jmp[25:0],2'b0};
+       end//上机请使�? outs={22'b0,jmp[7:0],2'b0};
+       3'b110:begin
+            outs=rd1_e;
+       end
+       3'b111:begin
+            outs={22'b0,jmp[7:0],2'b0};
+       end
+       default:outs=pc+{{14{jmp[15]}},jmp[15:0],2'b0};
 endcase
 endfunction
 endmodule
@@ -249,7 +272,8 @@ module PC(
 reg [31:0] pc;
 assign pc_out=pc;
 initial begin
-    pc<=32'b0;
+//       pc<=32'hbfc00000;
+          pc<=32'b0;
 end
 always@(posedge clk) begin
 //        if (PC_stall==1'b0) begin

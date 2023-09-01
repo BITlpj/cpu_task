@@ -26,8 +26,8 @@ module D_E(
     input wire [2:0]branch_d,
     input wire reg_write_d,
     input wire mem_to_reg_d,
-    input wire mem_write_d,
-    input wire [2:0]alu_control_d,
+    input wire [3:0]mem_write_d,
+    input wire [3:0]alu_control_d,
     input wire alu_src_d,
     input wire [4:0]reg_dst_d,
     input wire [31:0]rd1_d,//二路选择的结果
@@ -39,8 +39,8 @@ module D_E(
     output reg [2:0]branch_e,
     output reg reg_write_e,
     output reg mem_to_reg_e,
-    output reg mem_write_e,
-    output reg [2:0]alu_control_e,
+    output reg [3:0]mem_write_e,
+    output reg [3:0]alu_control_e,
     output reg alu_src_e,
     output reg [4:0]reg_dst_e,
     output reg [31:0]rd1_e,
@@ -51,7 +51,14 @@ module D_E(
     output reg [31:0]PC_plus4_e,
     
     input wire [31:0]debug_wb_pc_d,
-    output reg [31:0]debug_wb_pc_e
+    output reg [31:0]debug_wb_pc_e,
+    
+    input wire [4:0] shamt_d,
+    output reg [4:0] shamt_e,
+    
+    
+    input wire [25:0] jmp_addr_d,
+    output reg [25:0] jmp_addr_e
     );
     initial begin
         branch_e <= 0;
@@ -67,6 +74,8 @@ module D_E(
         rd_e <= 0;
         imm_e <= 0;
         PC_plus4_e <= 0;
+        jmp_addr_e<=0;
+        shamt_e<=0;
     end
     always@(posedge clk or posedge reset) begin
         if(reset) begin
@@ -84,6 +93,8 @@ module D_E(
             imm_e <= 0;
             PC_plus4_e <= 0;
             debug_wb_pc_e<=0;
+            jmp_addr_e<=0;
+            shamt_e<=0;
         end
         else begin
             branch_e <= branch_d;
@@ -99,8 +110,9 @@ module D_E(
             rd_e <= rd_d;
             imm_e <= sign_imm_d;
             PC_plus4_e <= PC_plus4_d; 
-            
+            jmp_addr_e<=jmp_addr_d;
             debug_wb_pc_e<=debug_wb_pc_d;
+            shamt_e<=shamt_d;
         end
     end
 endmodule

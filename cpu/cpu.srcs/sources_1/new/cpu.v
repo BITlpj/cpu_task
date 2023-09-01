@@ -27,8 +27,9 @@ include cpu_part.v;
 include control.v;
 include regfile.v;
 include signextend.v;
+include jal_mux.v;
 
-module cpu(
+module mycpu_top(
     input clk,
     input resetn,
     input int,//ignored
@@ -37,7 +38,7 @@ module cpu(
     output [3:0] inst_sram_wen,//4'b0000
     output [31:0] inst_sram_addr,
     output [31:0] inst_sram_wdata,//ignored
-    input  [31:0] inst_sram_rdata,//¶ÁÊý¾Ý
+    input  [31:0] inst_sram_rdata,//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     
     output data_sram_en,
     output [3:0]data_sram_wen,
@@ -85,9 +86,10 @@ wire[2:0] branch_d;
 wire reg_write_d;
 wire mem_to_reg_d;
 wire [3:0]mem_write_d;
-wire [2:0]alu_control_d;
+wire [3:0]alu_control_d;
 wire alu_src_d;
 wire reg_dst_d;
+wire unsign_d;
 
 
 wire [31:0]rd1_src0;
@@ -104,37 +106,38 @@ wire [31:0]rd2;
 
 wire [31:0] imm_out;
 
-/*Ñ¡ÔñÐ´Èë¼Ä´æÆ÷µÄÏà¹ØÏß*/
+/*Ñ¡ï¿½ï¿½Ð´ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 wire [4:0] rt_e;
 wire [4:0] rd_e;
 wire [4:0] write_data_e;
 wire reg_dst_e;
 
-/*Ñ¡Ôñalu_srcµÄÏà¹ØÏß*/
+/*Ñ¡ï¿½ï¿½alu_srcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?*/
 wire [31:0] imm_e;
 wire alu_src_e;
 wire [31:0] alu_src2;
 
-/*aluÏà¹ØµÄÏß*/
+/*aluï¿½ï¿½Øµï¿½ï¿½ï¿?*/
 
 wire [31:0] alu_src1;
 wire [1:0]  zero;
 wire [31:0]alu_out_e;
+wire [31:0]instr_d;
 
 wire [31:0] PC_plus4_e;
 wire [31:0]pc_jmp_out;
 
-/*RAMµÄÏà¹ØÏß*/
+/*RAMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?*/
 
 wire [31:0]ram_rd;
 
 
-/*µÚ¶þ¸ö¼Ä´æÆ÷Ïà¹ØµÄ*/
+/*ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿?*/
 wire[2:0] branch_e;
 wire reg_write_e;
 wire mem_to_reg_e;
 wire [3:0]mem_write_e;
-wire [2:0]alu_control_e;
+wire [3:0]alu_control_e;
 wire alu_src_e;
 wire reg_dst_e;
 wire [31:0]rd1_e;
@@ -142,8 +145,10 @@ wire [31:0]rd2_e;
 wire [31:0]PC_plus4_d;
 
 
-/*µÚÈý¸ö¼Ä´æÆ÷Ïà¹Ø*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?*/
 wire [4:0]write_reg_e;
+wire [31:0]write_reg_e_pre;
+wire [31:0] rd1_e_final;
 wire [2:0]branch_m;
 wire reg_write_m;
 wire mem_to_reg_m;
@@ -154,7 +159,7 @@ wire [4:0] write_reg_m;
 wire [31:0] write_data_m;
 wire [31:0] PC_branch_m;
 
-/*µÚËÄ¸ö¼Ä´æÆ÷*/
+/*ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ä´ï¿½ï¿½ï¿½*/
 wire reg_write_w;
 wire [31:0] result_w;
 wire [4:0]write_reg_w;
@@ -162,31 +167,32 @@ wire [4:0]write_reg_w;
 wire [31:0]result_m;
 
 wire over_flag;
-reg  over_flag_reg;
+assign over=over_flag;
 wire PC_stall;
 
 
-/*debugÓÃ*/
+/*debugï¿½ï¿½*/
 wire [31:0]debug_wb_pc_f;
 wire [31:0]debug_wb_pc_d;
 wire [31:0]debug_wb_pc_e;
 wire [31:0]debug_wb_pc_m;
 wire [31:0]debug_wb_pc_w;
 
+/*shamtï¿½ï¿½ï¿?*/
+wire [4:0]shamt_d;
+wire [4:0]shamt_e;
+
+
+wire [25:0] jmp_addr_e;
+wire [25:0] jmp_addr_d;
+
 assign debug_wb_rf_wen={reg_write_w,reg_write_w,reg_write_w,reg_write_w};
 assign debug_wb_rf_wdata=result_w;
 assign debug_wb_rf_wnum=write_reg_w;
 assign debug_wb_pc=debug_wb_pc_w;
 
-initial begin
-    over_flag_reg=1'b0;
-end 
 
-always@(posedge over_flag) begin
-    over_flag_reg=over_flag;
-end
 
-assign over=over_flag_reg;
 
 assign inst_sram_addr=rom_addr;
 assign rom_rd=inst_sram_rdata;
@@ -226,8 +232,9 @@ F_D f_d(
     .instr(rom_rd),
     .PC_plus4_f(PC_plus4_f),
     
-    .op(op),
-    .func(func),
+//    .op(op),
+//    .func(func),
+    .instr_d(instr_d),
     .addr1(addr1),
     .addr2(addr2),
     .rt_d(rt_d),
@@ -235,22 +242,41 @@ F_D f_d(
     .imm(imm),
     .PC_plus4_d(PC_plus4_d),
     .PC_stall(PC_stall),
-    
+    .shamt_d(shamt_d),
     
     .debug_wb_pc_f(debug_wb_pc_f),
-    .debug_wb_pc_d(debug_wb_pc_d)
+    .debug_wb_pc_d(debug_wb_pc_d),
+    
+    .jmp_addr_d(jmp_addr_d)
 );
 
 control cpu_control(
-       .op(op),
-       .func(func),
+       .instr(instr_d),
        .branch(branch_d),
        .reg_write(reg_write_d),
        .mem_to_reg(mem_to_reg_d),
        .mem_write(mem_write_d),
        .alu_control(alu_control_d),
        .alu_src(alu_src_d),
-       .reg_dst(reg_dst_d)
+       .reg_dst(reg_dst_d),
+       .unsign(unsign_d)
+);
+
+jal_mux_32 jal_mux_data(
+    .src1(debug_wb_pc_e+4),
+    .src2(rd1_e),
+    .select(branch_e),
+    .out(rd1_e_final)
+);
+
+
+
+jal_mux_5 jal_mux_addr(
+    .src1(32'b11111),
+    .src2(write_reg_e_pre),
+    .select(branch_e),
+    .out(write_reg_e)  
+
 );
 
 
@@ -268,6 +294,7 @@ regfile cpu_regfile(
 
 signextend cpu_signextend( 
     .imm(imm),
+    .unsign(unsign_d),
     .imm_out(imm_out)
 );
 
@@ -306,7 +333,7 @@ mux2_1_5 mux_choose_reg_write(
     .src1(rd_e),
     .src2(rt_e),
     .select(reg_dst_e),
-    .out(write_reg_e)
+    .out(write_reg_e_pre)
 );
 
 
@@ -319,8 +346,9 @@ mux2_1_32 mux_choose_alu_src(
 
 ALU cpu_alu(
     .control(alu_control_e),
-    .alu_num1(rd1_e),
+    .alu_num1(rd1_e_final),
     .alu_num2(alu_src2),
+    .shamt_e({1'b0,shamt_e}),
     
     .ans(alu_out_e),
     .zero_m(zero),
@@ -328,9 +356,10 @@ ALU cpu_alu(
     );
 
 pc_plus pc_plus_jmp(
-    .pc(imm_e),
+    .pc(PC_plus4_e),
     .branch_e(branch_e),
-    .jmp(PC_plus4_e),
+    .rd1_e(rd1_e),
+    .jmp(jmp_addr_e),
     .out(pc_jmp_out)
 );
 
@@ -348,7 +377,7 @@ assign data_sram_addr=alu_out_m;
 assign data_sram_wen=mem_write_m;
 assign data_sram_wdata=write_data_m;
 assign ram_rd=data_sram_rdata;
-assign ram_sram_en=1'b1;
+assign data_sram_en=1'b1;
 
 
 judge_is_jmp  cpu_judge_is_jmp(
@@ -397,7 +426,15 @@ D_E d_e(
     
     
     .debug_wb_pc_d(debug_wb_pc_d),
-    .debug_wb_pc_e(debug_wb_pc_e)
+    .debug_wb_pc_e(debug_wb_pc_e),
+    
+    
+    .shamt_d(shamt_d),
+    .shamt_e(shamt_e),
+    
+    
+    .jmp_addr_e(jmp_addr_e),
+    .jmp_addr_d(jmp_addr_d)
     );
     
 E_M e_m(
