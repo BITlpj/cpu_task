@@ -24,6 +24,8 @@ include vga.v;
 module cpu_vga_top(
     input clk,
     input rstn,
+    input change1,
+    input change2,
     output hs,
     output vs,
     output [3:0]red,
@@ -138,6 +140,8 @@ mycpu_top test_cpu(
     vga my_vga(
         .data(cache_out),
         .clk(clk),
+        .change1(change1),
+        .change2(change2),
         .rstn(rstn),
         .hs(hs),
         .vs(vs),

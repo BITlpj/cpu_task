@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Sep  3 16:53:23 2023
+| Date         : Sun Sep  3 17:32:52 2023
 | Host         : DESKTOP-J9AK86M running 64-bit major release  (build 9200)
 | Command      : report_methodology -file cpu_vga_top_methodology_drc_routed.rpt -pb cpu_vga_top_methodology_drc_routed.pb -rpx cpu_vga_top_methodology_drc_routed.rpx
 | Design       : cpu_vga_top
@@ -23,12 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1001
+             Violations found: 1019
 +-----------+------------------+-------------------------------------------+------------+
 | Rule      | Severity         | Description                               | Violations |
 +-----------+------------------+-------------------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell               | 1000       |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin | 1          |
+| SYNTH-10  | Warning          | Wide multiplier                           | 6          |
+| TIMING-16 | Warning          | Large setup violation                     | 12         |
 +-----------+------------------+-------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -5036,6 +5038,96 @@ Related violations: <none>
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock my_vga/u_clk_wiz/inst/clk_in1 is created on an inappropriate internal pin my_vga/u_clk_wiz/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at my_vga/reg_r4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at my_vga/reg_r4__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at my_vga/reg_r4__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at my_vga/reg_r4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at my_vga/reg_r4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at my_vga/reg_r4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.905 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_b_reg[3]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.945 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_b_reg[2]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.063 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_b_reg[0]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.075 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_b_reg[1]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.218 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_r_reg[3]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.232 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_g_reg[0]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.238 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_g_reg[2]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.248 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_g_reg[1]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -2.393 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_g_reg[3]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -2.496 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_r_reg[1]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -2.502 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_r_reg[2]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -2.517 ns between my_vga/v_cur_reg[5]_replica/C (clocked by clk_out1_clk_wiz_ip) and my_vga/reg_r_reg[0]/D (clocked by clk_out1_clk_wiz_ip). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

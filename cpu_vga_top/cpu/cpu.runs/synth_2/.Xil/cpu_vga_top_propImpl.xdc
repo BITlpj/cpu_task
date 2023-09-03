@@ -33,3 +33,7 @@ set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN C4 [get_ports vs]
 set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN K2 [get_ports led]
+set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P4 [get_ports change2]
+set_property src_info {type:XDC file:1 line:51 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P5 [get_ports change1]
