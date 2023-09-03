@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../cpu.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../cpu.srcs/sources_1/new/ALU.v" \
+"../../../../cpu.srcs/sources_1/new/D_E.v" \
+"../../../../cpu.srcs/sources_1/new/E_M.v" \
+"../../../../cpu.srcs/sources_1/new/F_D.v" \
+"../../../../cpu.srcs/sources_1/new/M_W.v" \
+"../../../../cpu.srcs/sources_1/new/control.v" \
+"../../../../cpu.srcs/sources_1/new/cpu.v" \
+"../../../../cpu.srcs/sources_1/new/cpu_part.v" \
+"../../../../cpu.srcs/sources_1/new/forwarding_unit .v" \
+"../../../../cpu.srcs/sources_1/new/jal_mux.v" \
+"../../../../cpu.srcs/sources_1/new/pre_read.v" \
+"../../../../cpu.srcs/sources_1/new/regfile.v" \
+"../../../../cpu.srcs/sources_1/new/signextend.v" \
+"../../../../cpu.srcs/sim_1/new/cpu_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

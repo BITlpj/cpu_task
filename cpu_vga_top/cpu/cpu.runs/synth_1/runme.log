@@ -1,0 +1,708 @@
+
+*** Running vivado
+    with args -log cpu_vga_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu_vga_top.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source cpu_vga_top.tcl -notrace
+Command: synth_design -top cpu_vga_top -part xc7k70tfbv676-1
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xci
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xci
+
+INFO: [IP_Flow 19-2162] IP 'clk_wiz_ip' is locked:
+* Current project part 'xc7k70tfbv676-1' and the part 'xc7a35tcsg324-1' used to customize the IP 'clk_wiz_ip' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16304 
+WARNING: [Synth 8-2490] overwriting previous definition of module D_E [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module E_M [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module F_D [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module M_W [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/M_W.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module ALU [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v:1]
+WARNING: [Synth 8-6901] identifier 'memory' is used before its declaration [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:177]
+WARNING: [Synth 8-2490] overwriting previous definition of module control [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v:3]
+WARNING: [Synth 8-976] ram_rd has already been declared [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:133]
+WARNING: [Synth 8-2654] second declaration of ram_rd ignored [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:133]
+INFO: [Synth 8-994] ram_rd is declared here [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:70]
+WARNING: [Synth 8-976] alu_src_e has already been declared [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:142]
+WARNING: [Synth 8-2654] second declaration of alu_src_e ignored [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:142]
+INFO: [Synth 8-994] alu_src_e is declared here [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:118]
+WARNING: [Synth 8-976] reg_dst_e has already been declared [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:143]
+WARNING: [Synth 8-2654] second declaration of reg_dst_e ignored [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:143]
+INFO: [Synth 8-994] reg_dst_e is declared here [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:114]
+WARNING: [Synth 8-2490] overwriting previous definition of module D_E [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module E_M [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module F_D [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module M_W [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/M_W.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module ALU [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module RAM [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module judge_is_jmp [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:66]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux2_1_32 [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:120]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux2_1_5 [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:144]
+WARNING: [Synth 8-6901] identifier 'memory' is used before its declaration [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:177]
+WARNING: [Synth 8-2490] overwriting previous definition of module ROM [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:167]
+WARNING: [Synth 8-2490] overwriting previous definition of module pc_plus4 [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:199]
+WARNING: [Synth 8-2490] overwriting previous definition of module is_stall [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:222]
+WARNING: [Synth 8-2490] overwriting previous definition of module pc_plus [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:247]
+WARNING: [Synth 8-2490] overwriting previous definition of module PC [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:277]
+WARNING: [Synth 8-2490] overwriting previous definition of module cpu_part [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:304]
+WARNING: [Synth 8-2490] overwriting previous definition of module jal_mux_32 [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module jal_mux_5 [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v:22]
+WARNING: [Synth 8-2490] overwriting previous definition of module pre_read [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/pre_read.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module regfile [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/regfile.v:3]
+WARNING: [Synth 8-2490] overwriting previous definition of module signextend [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/signextend.v:3]
+WARNING: [Synth 8-2490] overwriting previous definition of module vga [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:31]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 854.812 ; gain = 242.492
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_vga_top' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:24]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/.Xil/Vivado-11660-DESKTOP-J9AK86M/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (1#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/.Xil/Vivado-11660-DESKTOP-J9AK86M/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:29]
+WARNING: [Synth 8-6014] Unused sequential element tmp_memory_reg was removed.  [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (2#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:29]
+INFO: [Synth 8-6157] synthesizing module 'mycpu_top' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:33]
+INFO: [Synth 8-6157] synthesizing module 'pre_read' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/pre_read.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pre_read' (3#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/pre_read.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2_1_32' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:120]
+INFO: [Synth 8-226] default block is never used [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:131]
+INFO: [Synth 8-6155] done synthesizing module 'mux2_1_32' (4#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:120]
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:277]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (5#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:277]
+INFO: [Synth 8-6157] synthesizing module 'pc_plus4' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'pc_plus4' (6#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:199]
+INFO: [Synth 8-6157] synthesizing module 'F_D' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'F_D' (7#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:23]
+INFO: [Synth 8-6157] synthesizing module 'control' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v:26]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'control' (8#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'jal_mux_32' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'jal_mux_32' (9#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'jal_mux_5' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'jal_mux_5' (10#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v:22]
+WARNING: [Synth 8-689] width (32) of port connection 'src2' does not match port width (5) of module 'jal_mux_5' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:287]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/regfile.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (11#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/regfile.v:3]
+INFO: [Synth 8-6157] synthesizing module 'signextend' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/signextend.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'signextend' (12#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/signextend.v:3]
+INFO: [Synth 8-6157] synthesizing module 'forwarding_unit' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/forwarding_unit .v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/forwarding_unit .v:68]
+INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (13#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/forwarding_unit .v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux2_1_5' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:144]
+INFO: [Synth 8-226] default block is never used [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'mux2_1_5' (14#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:144]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (15#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pc_plus' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:247]
+INFO: [Synth 8-6155] done synthesizing module 'pc_plus' (16#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:247]
+WARNING: [Synth 8-689] width (4) of port connection 'select' does not match port width (1) of module 'mux2_1_32' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:398]
+INFO: [Synth 8-6157] synthesizing module 'judge_is_jmp' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'judge_is_jmp' (17#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:66]
+INFO: [Synth 8-6157] synthesizing module 'D_E' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'D_E' (18#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'reg_dst_e' does not match port width (5) of module 'D_E' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:439]
+INFO: [Synth 8-6157] synthesizing module 'E_M' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'E_M' (19#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v:23]
+INFO: [Synth 8-6157] synthesizing module 'M_W' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/M_W.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'M_W' (20#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/M_W.v:23]
+WARNING: [Synth 8-3848] Net inst_sram_wdata in module/entity mycpu_top does not have driver. [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'mycpu_top' (21#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:33]
+WARNING: [Synth 8-7023] instance 'test_cpu' of module 'mycpu_top' has 18 connections declared, but only 17 given [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:94]
+INFO: [Synth 8-6157] synthesizing module 'vga' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:31]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_ip' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/.Xil/Vivado-11660-DESKTOP-J9AK86M/realtime/clk_wiz_ip_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_ip' (22#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/.Xil/Vivado-11660-DESKTOP-J9AK86M/realtime/clk_wiz_ip_stub.v:5]
+WARNING: [Synth 8-7023] instance 'u_clk_wiz' of module 'clk_wiz_ip' has 4 connections declared, but only 3 given [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:44]
+INFO: [Synth 8-4471] merging register 'reg_b_reg[3:0]' into 'reg_g_reg[3:0]' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:130]
+WARNING: [Synth 8-6014] Unused sequential element reg_b_reg was removed.  [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (23#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_vga_top' (24#1) [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:24]
+WARNING: [Synth 8-3917] design cpu_vga_top has port led driven by constant 1
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[31]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[30]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[29]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[28]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[27]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[26]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[25]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[24]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[23]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[22]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[21]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[20]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[19]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[18]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[17]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[16]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[15]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[14]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[13]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[12]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[11]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[10]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[9]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[8]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[7]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[6]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[5]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[4]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[3]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[2]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[1]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[0]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port int
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_en
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[31]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[30]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[29]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[28]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[27]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[26]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[25]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[24]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[23]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[22]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[21]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[20]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[19]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[18]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[17]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[16]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[15]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[14]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[13]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[12]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[11]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[10]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[9]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[8]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 934.879 ; gain = 322.559
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 942.949 ; gain = 330.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 942.949 ; gain = 330.629
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 942.949 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc] for cell 'my_vga/u_clk_wiz'
+Finished Parsing XDC File [d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc] for cell 'my_vga/u_clk_wiz'
+Parsing XDC File [d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'test_rom'
+Finished Parsing XDC File [d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'test_rom'
+Parsing XDC File [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]
+Finished Parsing XDC File [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_vga_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_vga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1072.957 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1072.957 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'test_rom' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for my_vga/u_clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for test_rom. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'rt_d_reg[4:0]' into 'addr2_reg[4:0]' [D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 49    
+	               26 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 128   
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     66 Bit        Muxes := 7     
+	   4 Input     66 Bit        Muxes := 1     
+	   4 Input     35 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 14    
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  13 Input     13 Bit        Muxes := 1     
+	  15 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 69    
+	   2 Input      8 Bit        Muxes := 128   
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 125   
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 41    
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 128   
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 69    
+	   2 Input      8 Bit        Muxes := 128   
+	   4 Input      2 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 125   
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module pre_read 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mux2_1_32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module pc_plus4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+Module F_D 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 6     
+Module control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  13 Input     13 Bit        Muxes := 1     
+	  15 Input     13 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+Module jal_mux_32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module jal_mux_5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module regfile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module signextend 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module forwarding_unit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     66 Bit        Muxes := 7     
+	   4 Input     66 Bit        Muxes := 1     
+Module mux2_1_5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   4 Input     35 Bit        Muxes := 1     
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+Module pc_plus 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+Module judge_is_jmp 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 1     
+Module D_E 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	               26 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module E_M 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module M_W 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module mycpu_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design cpu_vga_top has port led driven by constant 1
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[31]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[30]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[29]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[28]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[27]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[26]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[25]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[24]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[23]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[22]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[21]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[20]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[19]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[18]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[17]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[16]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[15]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[14]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[13]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[12]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[11]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[10]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[9]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[8]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[7]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[6]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[5]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[4]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[3]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[2]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[1]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[0]
+WARNING: [Synth 8-3331] design mycpu_top has unconnected port int
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_en
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[31]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[30]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[29]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[28]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[27]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[26]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[25]
+WARNING: [Synth 8-3331] design RAM has unconnected port data_sram_addr[24]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'my_vga/reg_g_reg[0]' (FD) to 'my_vga/reg_g_reg[3]'
+INFO: [Synth 8-3886] merging instance 'my_vga/reg_g_reg[1]' (FD) to 'my_vga/reg_g_reg[3]'
+INFO: [Synth 8-3886] merging instance 'my_vga/reg_g_reg[2]' (FD) to 'my_vga/reg_g_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_vga/reg_g_reg[3] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1074.465 ; gain = 462.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1120.598 ; gain = 508.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
+|2     |clk_wiz_ip    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |blk_mem_gen_0 |     1|
+|2     |clk_wiz_ip    |     1|
+|3     |CARRY4        |    52|
+|4     |LUT1          |     5|
+|5     |LUT2          |   234|
+|6     |LUT3          |   927|
+|7     |LUT4          |   315|
+|8     |LUT5          |   674|
+|9     |LUT6          |  2466|
+|10    |MUXF7         |   566|
+|11    |MUXF8         |   167|
+|12    |FDCE          |  2577|
+|13    |FDRE          |   112|
+|14    |FDSE          |     9|
+|15    |IBUF          |     1|
+|16    |OBUF          |    15|
++------+--------------+------+
+
+Report Instance Areas: 
++------+--------------------------+------------+------+
+|      |Instance                  |Module      |Cells |
++------+--------------------------+------------+------+
+|1     |top                       |            |  8154|
+|2     |  my_vga                  |vga         |    71|
+|3     |  test_cpu                |mycpu_top   |  5550|
+|4     |    cpu_pc                |PC          |   105|
+|5     |    cpu_pre_read          |pre_read    |   131|
+|6     |    cpu_regfile           |regfile     |  1921|
+|7     |    d_e                   |D_E         |  1603|
+|8     |    e_m                   |E_M         |  1256|
+|9     |    f_d                   |F_D         |   204|
+|10    |    jal_mux_addr          |jal_mux_5   |     6|
+|11    |    jal_mux_data          |jal_mux_32  |    64|
+|12    |    m_w                   |M_W         |    70|
+|13    |    mux_choos_ram_addr    |mux2_1_32   |    22|
+|14    |    mux_choose_alu_src    |mux2_1_32_0 |    32|
+|15    |    mux_choose_pc         |mux2_1_32_1 |    32|
+|16    |    mux_choose_rd1        |mux2_1_32_2 |    32|
+|17    |    mux_choose_rd2        |mux2_1_32_3 |    32|
+|18    |    mux_choose_result_src |mux2_1_32_4 |    32|
+|19    |  test_ram                |RAM         |  2485|
++------+--------------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1124.875 ; gain = 512.555
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 59 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1124.875 ; gain = 381.039
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1124.875 ; gain = 512.555
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1137.266 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 785 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1137.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 148 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1137.266 ; gain = 798.473
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1137.266 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_1/cpu_vga_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_vga_top_utilization_synth.rpt -pb cpu_vga_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  3 13:03:02 2023...
