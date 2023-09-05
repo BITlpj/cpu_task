@@ -525,18 +525,24 @@ module vga (
     
     integer k;
    
-    
+    reg flag;
     always @ (posedge clk_vga) begin
         if (mode==1 || mode==2) begin
             if (!rstn) begin
+                flag<=1;
                 count <= 32'b0;
                 s = 0;
             end
             else begin
                 if (mode==1) begin
+                    flag<=1;
                     count <= data;
                 end
                 else if (mode==2) begin
+                    if (flag==1) begin
+                        count<=0;
+                        flag<=0;;
+                    end
                     s=s+1;
                     if (s>=65000000) begin
                         count <= count + 1;
@@ -544,6 +550,9 @@ module vga (
                     end
                 end
             end
+        end
+        else begin
+            flag<=1;
         end
     end
     

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc rfile:../../../cpu.srcs/constrs_1/new/cpu_vga_top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc rfile:../../../cpu.srcs/constrs_1/new/cpu_vga_top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E7 [get_ports {blue[3]}]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a35tlcsg324-2L
@@ -25,40 +27,41 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.cache/wt [current_project]
-set_property parent.project_path D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.xpr [current_project]
+set_property webtalk.parent_dir D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.cache/wt [current_project]
+set_property parent.project_path D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.cache/ip [current_project]
+set_property ip_output_repo d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files D:/thisyear/cpu_task/cpu_vga_top/cpu/final_testBubbleSort.coe
+add_files D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/final_testBubbleSort.coe
 read_verilog -library xil_defaultlib {
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/M_W.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cache.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v
-  {D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/forwarding_unit .v}
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/pre_read.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/regfile.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/signextend.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/slow_clk.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v
-  D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/ALU.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/M_W.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cache.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/control.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/debounce.v
+  {D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/forwarding_unit .v}
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/jal_mux.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/pre_read.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/regfile.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/signextend.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/slow_clk.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v
+  D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v
 }
-read_ip -quiet D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xci
-set_property used_in_implementation false [get_files -all d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip_board.xdc]
-set_property used_in_implementation false [get_files -all d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xdc]
-set_property used_in_implementation false [get_files -all d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip_ooc.xdc]
+read_ip -quiet D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xci
+set_property used_in_implementation false [get_files -all d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip_board.xdc]
+set_property used_in_implementation false [get_files -all d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xdc]
+set_property used_in_implementation false [get_files -all d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip_ooc.xdc]
 
-read_ip -quiet D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all d:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -68,8 +71,8 @@ set_property used_in_implementation false [get_files -all d:/thisyear/cpu_task/c
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc
-set_property used_in_implementation false [get_files D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]
+read_xdc D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc
+set_property used_in_implementation false [get_files D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

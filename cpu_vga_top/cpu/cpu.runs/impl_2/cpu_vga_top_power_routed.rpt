@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Sep  3 17:32:56 2023
+| Date             : Tue Sep  5 16:38:25 2023
 | Host             : DESKTOP-J9AK86M running 64-bit major release  (build 9200)
 | Command          : report_power -file cpu_vga_top_power_routed.rpt -pb cpu_vga_top_power_summary_routed.pb -rpx cpu_vga_top_power_routed.rpx
 | Design           : cpu_vga_top
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.205        |
+| Total On-Chip Power (W)  | 0.204        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.136        |
@@ -52,21 +52,21 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.004 |    14275 |       --- |             --- |
-|   LUT as Logic |     0.004 |     8690 |     20800 |           41.78 |
-|   CARRY4       |    <0.001 |      265 |      8150 |            3.25 |
-|   F7/F8 Muxes  |    <0.001 |     1371 |     32600 |            4.21 |
-|   Register     |    <0.001 |     2801 |     41600 |            6.73 |
-|   Others       |     0.000 |       25 |       --- |             --- |
+| Clocks         |     0.002 |        5 |       --- |             --- |
+| Slice Logic    |     0.003 |    14400 |       --- |             --- |
+|   LUT as Logic |     0.003 |     8674 |     20800 |           41.70 |
+|   CARRY4       |    <0.001 |      273 |      8150 |            3.35 |
+|   F7/F8 Muxes  |    <0.001 |     1453 |     32600 |            4.46 |
+|   Register     |    <0.001 |     2845 |     41600 |            6.84 |
+|   Others       |     0.000 |       27 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |     0.005 |    10171 |       --- |             --- |
+| Signals        |     0.004 |    10126 |       --- |             --- |
 | Block RAM      |     0.000 |      0.5 |        50 |            1.00 |
 | MMCM           |     0.122 |        1 |         5 |           20.00 |
 | DSPs           |     0.002 |        6 |        90 |            6.67 |
 | I/O            |     0.003 |       19 |       210 |            9.05 |
 | Static Power   |     0.068 |          |           |                 |
-| Total          |     0.205 |          |           |                 |
+| Total          |     0.204 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       0.900 |     0.020 |       0.013 |      0.007 |
+| Vccint    |       0.900 |     0.019 |       0.012 |      0.007 |
 | Vccaux    |       1.800 |     0.080 |       0.068 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -148,11 +148,9 @@ Table of Contents
 | Name          | Power (W) |
 +---------------+-----------+
 | cpu_vga_top   |     0.136 |
-|   my_vga      |     0.132 |
+|   my_vga      |     0.131 |
 |     u_clk_wiz |     0.122 |
 |       inst    |     0.122 |
-|   test_cpu    |     0.001 |
-|     f_d       |     0.001 |
 +---------------+-----------+
 
 

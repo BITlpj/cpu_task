@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/blk_mem_gen_0_synth_1'
+HD_PWD='D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/blk_mem_gen_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

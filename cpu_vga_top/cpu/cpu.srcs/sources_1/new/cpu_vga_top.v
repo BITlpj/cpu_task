@@ -34,7 +34,13 @@ module cpu_vga_top(
     output led
     );
     
-    
+debounce rstn_debounce(
+    .rstn(rstn),
+    .clk(clk),
+    .button_in(rstn),
+    .button_out(rstn_stable)
+    );   
+    wire rstn_stable;
     wire over;
     wire inst_sram_en;
     wire [3:0]inst_sram_wen;
@@ -78,7 +84,7 @@ assign led=rstn;
  
  
   cache test_cache(
-    .rstn(rstn),
+    .rstn(rstn_stable),
     .clk (slow_clk),
     .cache_data(cache_data),
     .cache_addr(cache_addr),
@@ -96,7 +102,7 @@ assign led=rstn;
  );
    RAM test_ram(
         .clk(slow_clk),
-        .rst(~rstn),
+        .rst(~rstn_stable),
         .data_sram_en(data_sram_en),
         .data_sram_wen(data_sram_wen),
         .data_sram_addr(data_sram_addr),
@@ -118,7 +124,7 @@ assign led=rstn;
     
 mycpu_top test_cpu(
    .clk(slow_clk),
-   .resetn(rstn),
+   .resetn(rstn_stable),
 
    .inst_sram_en(inst_sram_en),
    .inst_sram_wen(inst_sram_wen),//4'b0000
@@ -142,7 +148,7 @@ mycpu_top test_cpu(
         .clk(clk),
         .change1(change1),
         .change2(change2),
-        .rstn(rstn),
+        .rstn(rstn_stable),
         .hs(hs),
         .vs(vs),
         .r(red),
