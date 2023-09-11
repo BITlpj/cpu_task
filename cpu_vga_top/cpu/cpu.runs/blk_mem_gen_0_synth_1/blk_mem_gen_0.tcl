@@ -32,6 +32,8 @@ set_property parent.project_path D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.x
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths d:/4_th_year_bit/ip [current_project]
+update_ip_catalog
 set_property ip_output_repo d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci

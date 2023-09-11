@@ -143,7 +143,7 @@ mycpu_top test_cpu(
    .debug_wb_rf_wdata(debug_wb_rf_wdata),
    .over(over)
 );
-    vga my_vga(
+    vga_controller_0 my_vga(
         .data(cache_out),
         .clk(clk),
         .change1(change1),

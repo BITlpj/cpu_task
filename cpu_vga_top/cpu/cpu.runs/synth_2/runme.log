@@ -9,24 +9,24 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source cpu_vga_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/4_th_year_bit/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/verilog/Vivado/2019.2/data/ip'.
 Command: synth_design -top cpu_vga_top -part xc7a35tlcsg324-2L
 Starting synth_design
 WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
-D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xci
 D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 
-WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
-D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip.xci
-
-INFO: [IP_Flow 19-2162] IP 'clk_wiz_ip' is locked:
-* Current project part 'xc7a35tlcsg324-2L' and the part 'xc7a35tcsg324-1' used to customize the IP 'clk_wiz_ip' do not match.
 INFO: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
 * Current project part 'xc7a35tlcsg324-2L' and the part 'xc7k70tfbv676-1' used to customize the IP 'blk_mem_gen_0' do not match.
+INFO: [IP_Flow 19-2162] IP 'vga_controller_0' is locked:
+* IP definition 'vga_controller (1.0)' for IP 'vga_controller_0' (customized with software release 2019.2) was not found in the IP Catalog.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35tl'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35tl'
 INFO: [Device 21-403] Loading part xc7a35tlcsg324-2L
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6416 
+INFO: Helper process launched with PID 9872 
 WARNING: [Synth 8-2490] overwriting previous definition of module D_E [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/D_E.v:23]
 WARNING: [Synth 8-2490] overwriting previous definition of module E_M [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/E_M.v:23]
 WARNING: [Synth 8-2490] overwriting previous definition of module F_D [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:23]
@@ -64,10 +64,9 @@ WARNING: [Synth 8-2490] overwriting previous definition of module jal_mux_5 [D:/
 WARNING: [Synth 8-2490] overwriting previous definition of module pre_read [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/pre_read.v:1]
 WARNING: [Synth 8-2490] overwriting previous definition of module regfile [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/regfile.v:3]
 WARNING: [Synth 8-2490] overwriting previous definition of module signextend [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/signextend.v:3]
-WARNING: [Synth 8-2490] overwriting previous definition of module vga [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:31]
 WARNING: [Synth 8-992] rstn_stable is already implicitly declared earlier [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:43]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 854.270 ; gain = 242.664
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 854.137 ; gain = 242.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'cpu_vga_top' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:24]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/debounce.v:23]
@@ -76,8 +75,8 @@ INFO: [Synth 8-6157] synthesizing module 'slow_clk' [D:/4_th_year_bit/cpu_task/c
 INFO: [Synth 8-6155] done synthesizing module 'slow_clk' (2#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/slow_clk.v:23]
 INFO: [Synth 8-6157] synthesizing module 'cache' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cache.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'cache' (3#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cache.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-23564-DESKTOP-J9AK86M/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-23564-DESKTOP-J9AK86M/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-32668-DESKTOP-J9AK86M/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-32668-DESKTOP-J9AK86M/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'RAM' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:29]
 WARNING: [Synth 8-6014] Unused sequential element tmp_memory_reg was removed.  [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (5#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_part.v:29]
@@ -130,17 +129,9 @@ INFO: [Synth 8-6155] done synthesizing module 'M_W' (23#1) [D:/4_th_year_bit/cpu
 WARNING: [Synth 8-3848] Net inst_sram_wdata in module/entity mycpu_top does not have driver. [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:41]
 INFO: [Synth 8-6155] done synthesizing module 'mycpu_top' (24#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu.v:33]
 WARNING: [Synth 8-7023] instance 'test_cpu' of module 'mycpu_top' has 18 connections declared, but only 17 given [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:125]
-INFO: [Synth 8-6157] synthesizing module 'vga' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:31]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_ip' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-23564-DESKTOP-J9AK86M/realtime/clk_wiz_ip_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_ip' (25#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-23564-DESKTOP-J9AK86M/realtime/clk_wiz_ip_stub.v:5]
-WARNING: [Synth 8-7023] instance 'u_clk_wiz' of module 'clk_wiz_ip' has 4 connections declared, but only 3 given [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:46]
-INFO: [Synth 8-226] default block is never used [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:580]
-WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:563]
-WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:564]
-WARNING: [Synth 8-6014] Unused sequential element k_reg was removed.  [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:577]
-WARNING: [Synth 8-6014] Unused sequential element distance_reg was removed.  [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:1034]
-INFO: [Synth 8-6155] done synthesizing module 'vga' (26#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'cpu_vga_top' (27#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:24]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller_0' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-32668-DESKTOP-J9AK86M/realtime/vga_controller_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller_0' (25#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/.Xil/Vivado-32668-DESKTOP-J9AK86M/realtime/vga_controller_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_vga_top' (26#1) [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/cpu_vga_top.v:24]
 WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[31]
 WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[30]
 WARNING: [Synth 8-3331] design mycpu_top has unconnected port inst_sram_wdata[29]
@@ -243,7 +234,7 @@ WARNING: [Synth 8-3331] design cache has unconnected port cache_data[16]
 WARNING: [Synth 8-3331] design cache has unconnected port cache_data[15]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 947.262 ; gain = 335.656
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 938.902 ; gain = 327.012
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -256,124 +247,108 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 947.262 ; gain = 335.656
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 938.902 ; gain = 327.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 947.262 ; gain = 335.656
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 938.902 ; gain = 327.012
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 947.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 938.902 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc] for cell 'my_vga/u_clk_wiz'
-Finished Parsing XDC File [d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc] for cell 'my_vga/u_clk_wiz'
 Parsing XDC File [d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'test_rom'
 Finished Parsing XDC File [d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'test_rom'
+Parsing XDC File [d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/vga_controller_0/vga_controller_0/vga_controller_0_in_context.xdc] for cell 'my_vga'
+Finished Parsing XDC File [d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/vga_controller_0/vga_controller_0/vga_controller_0_in_context.xdc] for cell 'my_vga'
 Parsing XDC File [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]
 Finished Parsing XDC File [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/constrs_1/new/cpu_vga_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_vga_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_vga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/dont_touch.xdc]
-Finished Parsing XDC File [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1079.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1066.465 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1079.863 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1066.465 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1079.863 ; gain = 468.258
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tlcsg324-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1079.863 ; gain = 468.258
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/clk_wiz_ip/clk_wiz_ip/clk_wiz_ip_in_context.xdc, line 4).
-Applied set_property DONT_TOUCH = true for my_vga/u_clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/vga_controller_0/vga_controller_0/vga_controller_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/ip/vga_controller_0/vga_controller_0/vga_controller_0_in_context.xdc, line 3).
 Applied set_property DONT_TOUCH = true for test_rom. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for my_vga. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1079.863 ; gain = 468.258
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'rt_d_reg[4:0]' into 'addr2_reg[4:0]' [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/F_D.v:71]
-INFO: [Synth 8-5544] ROM "mode" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "a" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1110.602 ; gain = 498.996
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-----------------+------------+----------+
-|      |RTL Partition    |Replication |Instances |
-+------+-----------------+------------+----------+
-|1     |muxpart__224_vga |           1|    770057|
-|2     |vga__GB1         |           1|     15415|
-|3     |cpu_vga_top__GC0 |           1|     28457|
-+------+-----------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     33 Bit       Adders := 1     
 	   2 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 20    
+	   2 Input     32 Bit       Adders := 7     
 	   3 Input     32 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 51    
+	               32 Bit    Registers := 50    
 	               26 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
-	               11 Bit    Registers := 2     
 	                8 Bit    Registers := 128   
 	                5 Bit    Registers := 10    
-	                4 Bit    Registers := 16    
-	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 12    
-+---Multipliers : 
-	                32x32  Multipliers := 2     
+	                4 Bit    Registers := 12    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 7     
 	   4 Input     66 Bit        Muxes := 1     
 	   4 Input     35 Bit        Muxes := 1     
 	   2 Input     35 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 16    
+	   2 Input     32 Bit        Muxes := 14    
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input     26 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 1     
 	  13 Input     13 Bit        Muxes := 1     
 	  15 Input     13 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 69    
 	   2 Input      8 Bit        Muxes := 128   
 	   2 Input      5 Bit        Muxes := 5     
-	   2 Input      4 Bit        Muxes := 35    
-	   5 Input      4 Bit        Muxes := 3     
-	   6 Input      4 Bit        Muxes := 1     
-	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
 	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 6     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 55    
-	   3 Input      1 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 48    
 	   6 Input      1 Bit        Muxes := 125   
 	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -382,31 +357,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module vga 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 13    
-	   2 Input     11 Bit       Adders := 2     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               11 Bit    Registers := 2     
-	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Multipliers : 
-	                32x32  Multipliers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     11 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 31    
-	   5 Input      4 Bit        Muxes := 3     
-	   6 Input      4 Bit        Muxes := 1     
-	   8 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 7     
-	   3 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 1     
 Module debounce 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -452,7 +402,7 @@ Module pre_read
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-Module mux2_1_32__1 
+Module mux2_1_32 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
@@ -513,19 +463,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 7     
 	   4 Input     66 Bit        Muxes := 1     
-Module mux2_1_32__2 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-Module mux2_1_32__3 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 Module mux2_1_5 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-Module mux2_1_32__4 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
@@ -547,19 +485,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
-Module mux2_1_32__5 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 Module judge_is_jmp 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 3     
 	   9 Input      1 Bit        Muxes := 1     
-Module mux2_1_32 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 Module D_E 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -604,147 +534,97 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:1034]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.srcs/sources_1/new/vga.v:1034]
-DSP Report: Generating DSP reg_r4, operation Mode is: A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: Generating DSP reg_r4, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-DSP Report: operator reg_r4 is absorbed into DSP reg_r4.
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/mem_write_e_reg[2]' (FDC) to 'i_0/test_cpu/d_e/mem_write_e_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/mem_write_e_reg[0]' (FDC) to 'i_0/test_cpu/d_e/mem_write_e_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/mem_write_e_reg[1]' (FDC) to 'i_0/test_cpu/d_e/mem_write_e_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[21]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[29]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[29]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[17]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[17]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[25]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[25]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[19]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[19]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[27]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[27]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[31]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[31]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[23]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[23]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[20]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[20]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[28]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[28]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[16]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[16]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[24]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[24]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[18]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[18]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[26]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[26]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[30]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/imm_e_reg[30]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[22]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/e_m/mem_write_m_reg[2]' (FDC) to 'i_0/test_cpu/e_m/mem_write_m_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/e_m/mem_write_m_reg[0]' (FDC) to 'i_0/test_cpu/e_m/mem_write_m_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/e_m/mem_write_m_reg[1]' (FDC) to 'i_0/test_cpu/e_m/mem_write_m_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[6]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[7]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[8]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[9]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[10]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[10]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[11]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[12]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[12]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[13]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[13]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[14]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[14]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[15]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[15]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[5]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/PC_plus4_d_reg[0]' (FDC) to 'i_0/test_cpu/f_d/debug_wb_pc_d_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[0]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[1]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[2]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[3]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/f_d/jmp_addr_d_reg[4]' (FDC) to 'i_0/test_cpu/f_d/imm_reg[4]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[6]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[6]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[7]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[8]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[8]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[9]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[9]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[10]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[10]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[11]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[12]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[12]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[13]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[13]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[14]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[14]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[15]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[15]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[5]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[5]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/PC_plus4_e_reg[0]' (FDC) to 'i_0/test_cpu/d_e/debug_wb_pc_e_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[0]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[0]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[1]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[2]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[3]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/test_cpu/d_e/jmp_addr_e_reg[4]' (FDC) to 'i_0/test_cpu/d_e/imm_e_reg[4]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[16]' (FDC) to 'test_cpu/d_e/imm_e_reg[17]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[17]' (FDC) to 'test_cpu/d_e/imm_e_reg[18]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[18]' (FDC) to 'test_cpu/d_e/imm_e_reg[19]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[19]' (FDC) to 'test_cpu/d_e/imm_e_reg[20]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[20]' (FDC) to 'test_cpu/d_e/imm_e_reg[21]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[21]' (FDC) to 'test_cpu/d_e/imm_e_reg[22]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[22]' (FDC) to 'test_cpu/d_e/imm_e_reg[23]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[23]' (FDC) to 'test_cpu/d_e/imm_e_reg[24]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[24]' (FDC) to 'test_cpu/d_e/imm_e_reg[25]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[25]' (FDC) to 'test_cpu/d_e/imm_e_reg[26]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[26]' (FDC) to 'test_cpu/d_e/imm_e_reg[27]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[27]' (FDC) to 'test_cpu/d_e/imm_e_reg[28]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[28]' (FDC) to 'test_cpu/d_e/imm_e_reg[29]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[29]' (FDC) to 'test_cpu/d_e/imm_e_reg[30]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[30]' (FDC) to 'test_cpu/d_e/imm_e_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/mem_write_e_reg[2]' (FDC) to 'test_cpu/d_e/mem_write_e_reg[0]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/mem_write_e_reg[0]' (FDC) to 'test_cpu/d_e/mem_write_e_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/mem_write_e_reg[1]' (FDC) to 'test_cpu/d_e/mem_write_e_reg[3]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/e_m/mem_write_m_reg[2]' (FDC) to 'test_cpu/e_m/mem_write_m_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/e_m/mem_write_m_reg[0]' (FDC) to 'test_cpu/e_m/mem_write_m_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/e_m/mem_write_m_reg[1]' (FDC) to 'test_cpu/e_m/mem_write_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[6]' (FDC) to 'test_cpu/f_d/imm_reg[6]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[7]' (FDC) to 'test_cpu/f_d/imm_reg[7]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[8]' (FDC) to 'test_cpu/f_d/imm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[9]' (FDC) to 'test_cpu/f_d/imm_reg[9]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[10]' (FDC) to 'test_cpu/f_d/imm_reg[10]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[11]' (FDC) to 'test_cpu/f_d/imm_reg[11]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[12]' (FDC) to 'test_cpu/f_d/imm_reg[12]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[13]' (FDC) to 'test_cpu/f_d/imm_reg[13]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[14]' (FDC) to 'test_cpu/f_d/imm_reg[14]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[15]' (FDC) to 'test_cpu/f_d/imm_reg[15]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[5]' (FDC) to 'test_cpu/f_d/imm_reg[5]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/PC_plus4_d_reg[0]' (FDC) to 'test_cpu/f_d/debug_wb_pc_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[0]' (FDC) to 'test_cpu/f_d/imm_reg[0]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[1]' (FDC) to 'test_cpu/f_d/imm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[2]' (FDC) to 'test_cpu/f_d/imm_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[3]' (FDC) to 'test_cpu/f_d/imm_reg[3]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[4]' (FDC) to 'test_cpu/f_d/imm_reg[4]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[6]' (FDC) to 'test_cpu/d_e/imm_e_reg[6]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[7]' (FDC) to 'test_cpu/d_e/imm_e_reg[7]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[8]' (FDC) to 'test_cpu/d_e/imm_e_reg[8]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[9]' (FDC) to 'test_cpu/d_e/imm_e_reg[9]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[10]' (FDC) to 'test_cpu/d_e/imm_e_reg[10]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[11]' (FDC) to 'test_cpu/d_e/imm_e_reg[11]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[12]' (FDC) to 'test_cpu/d_e/imm_e_reg[12]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[13]' (FDC) to 'test_cpu/d_e/imm_e_reg[13]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[14]' (FDC) to 'test_cpu/d_e/imm_e_reg[14]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[15]' (FDC) to 'test_cpu/d_e/imm_e_reg[15]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[5]' (FDC) to 'test_cpu/d_e/imm_e_reg[5]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/PC_plus4_e_reg[0]' (FDC) to 'test_cpu/d_e/debug_wb_pc_e_reg[0]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[0]' (FDC) to 'test_cpu/d_e/imm_e_reg[0]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[1]' (FDC) to 'test_cpu/d_e/imm_e_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[2]' (FDC) to 'test_cpu/d_e/imm_e_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[3]' (FDC) to 'test_cpu/d_e/imm_e_reg[3]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[4]' (FDC) to 'test_cpu/d_e/imm_e_reg[4]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:00 . Memory (MB): peak = 1338.762 ; gain = 727.156
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-DSP: Preliminary Mapping	Report (see note below)
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|cpu_vga_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|cpu_vga_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-----------------+------------+----------+
-|      |RTL Partition    |Replication |Instances |
-+------+-----------------+------------+----------+
-|1     |muxpart__224_vga |           1|     11451|
-|2     |vga__GB1         |           1|      2433|
-|3     |cpu_vga_top__GC0 |           1|     15000|
-+------+-----------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:08 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:18 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:37 . Memory (MB): peak = 1066.465 ; gain = 454.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+-----------------+------------+----------+
-|      |RTL Partition    |Replication |Instances |
-+------+-----------------+------------+----------+
-|1     |muxpart__224_vga |           1|     11451|
-|2     |cpu_vga_top_GT0  |           1|     17399|
-+------+-----------------+------------+----------+
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[16]' (FDC) to 'test_cpu/f_d/addr2_reg[0]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[17]' (FDC) to 'test_cpu/f_d/addr2_reg[1]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[18]' (FDC) to 'test_cpu/f_d/addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[23]' (FDC) to 'test_cpu/f_d/addr1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[24]' (FDC) to 'test_cpu/f_d/addr1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[25]' (FDC) to 'test_cpu/f_d/addr1_reg[4]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[19]' (FDC) to 'test_cpu/f_d/addr2_reg[3]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[20]' (FDC) to 'test_cpu/f_d/addr2_reg[4]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[21]' (FDC) to 'test_cpu/f_d/addr1_reg[0]'
@@ -752,33 +632,30 @@ INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[22]' (FDC) to
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[16]' (FDC) to 'test_cpu/d_e/rt_e_reg[0]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[17]' (FDC) to 'test_cpu/d_e/rt_e_reg[1]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[18]' (FDC) to 'test_cpu/d_e/rt_e_reg[2]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[23]' (FDC) to 'test_cpu/f_d/addr1_reg[2]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[24]' (FDC) to 'test_cpu/f_d/addr1_reg[3]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/jmp_addr_d_reg[25]' (FDC) to 'test_cpu/f_d/addr1_reg[4]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[19]' (FDC) to 'test_cpu/d_e/rt_e_reg[3]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/jmp_addr_e_reg[20]' (FDC) to 'test_cpu/d_e/rt_e_reg[4]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[2]' (FDC) to 'test_cpu/f_d/imm_reg[13]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[3]' (FDC) to 'test_cpu/f_d/imm_reg[14]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[4]' (FDC) to 'test_cpu/f_d/imm_reg[15]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[2]' (FDC) to 'test_cpu/d_e/imm_e_reg[13]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[2]' (FDC) to 'test_cpu/f_d/imm_reg[13]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[0]' (FDC) to 'test_cpu/f_d/imm_reg[11]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[1]' (FDC) to 'test_cpu/f_d/imm_reg[12]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[9]' (FDC) to 'test_cpu/f_d/shamt_d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[7]' (FDC) to 'test_cpu/f_d/shamt_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[8]' (FDC) to 'test_cpu/f_d/shamt_d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[10]' (FDC) to 'test_cpu/f_d/shamt_d_reg[4]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/shamt_d_reg[0]' (FDC) to 'test_cpu/f_d/imm_reg[6]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[3]' (FDC) to 'test_cpu/d_e/imm_e_reg[14]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[4]' (FDC) to 'test_cpu/d_e/imm_e_reg[15]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[1]' (FDC) to 'test_cpu/f_d/imm_reg[12]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/rd_d_reg[0]' (FDC) to 'test_cpu/f_d/imm_reg[11]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[1]' (FDC) to 'test_cpu/d_e/imm_e_reg[12]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[2]' (FDC) to 'test_cpu/d_e/imm_e_reg[13]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[0]' (FDC) to 'test_cpu/d_e/imm_e_reg[11]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[8]' (FDC) to 'test_cpu/f_d/shamt_d_reg[2]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[9]' (FDC) to 'test_cpu/f_d/shamt_d_reg[3]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[10]' (FDC) to 'test_cpu/f_d/shamt_d_reg[4]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[8]' (FDC) to 'test_cpu/d_e/shamt_e_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/rd_e_reg[1]' (FDC) to 'test_cpu/d_e/imm_e_reg[12]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[9]' (FDC) to 'test_cpu/d_e/shamt_e_reg[3]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[10]' (FDC) to 'test_cpu/d_e/shamt_e_reg[4]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[6]' (FDC) to 'test_cpu/f_d/shamt_d_reg[0]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/f_d/imm_reg[7]' (FDC) to 'test_cpu/f_d/shamt_d_reg[1]'
-INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[6]' (FDC) to 'test_cpu/d_e/shamt_e_reg[0]'
 INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[7]' (FDC) to 'test_cpu/d_e/shamt_e_reg[1]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[8]' (FDC) to 'test_cpu/d_e/shamt_e_reg[2]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/imm_e_reg[10]' (FDC) to 'test_cpu/d_e/shamt_e_reg[4]'
+INFO: [Synth 8-3886] merging instance 'test_cpu/d_e/shamt_e_reg[0]' (FDC) to 'test_cpu/d_e/imm_e_reg[6]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:23 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:40 . Memory (MB): peak = 1180.887 ; gain = 568.996
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -802,13 +679,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:27 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:27 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:43 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -827,113 +704,111 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:28 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |blk_mem_gen_0 |         1|
-|2     |clk_wiz_ip    |         1|
-+------+--------------+----------+
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |blk_mem_gen_0    |         1|
+|2     |vga_controller_0 |         1|
++------+-----------------+----------+
 
 Report Cell Usage: 
-+------+--------------+------+
-|      |Cell          |Count |
-+------+--------------+------+
-|1     |blk_mem_gen_0 |     1|
-|2     |clk_wiz_ip    |     1|
-|3     |BUFG          |     1|
-|4     |CARRY4        |   273|
-|5     |DSP48E1       |     6|
-|6     |LUT1          |    63|
-|7     |LUT2          |   813|
-|8     |LUT3          |   936|
-|9     |LUT4          |   433|
-|10    |LUT5          |  1018|
-|11    |LUT6          |  6532|
-|12    |MUXF7         |  1015|
-|13    |MUXF8         |   438|
-|14    |FDCE          |  2491|
-|15    |FDRE          |   334|
-|16    |FDSE          |     9|
-|17    |IBUF          |     3|
-|18    |OBUF          |    15|
-+------+--------------+------+
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_gen_0    |     1|
+|2     |vga_controller_0 |     1|
+|3     |BUFG             |     1|
+|4     |CARRY4           |    84|
+|5     |LUT1             |     4|
+|6     |LUT2             |   147|
+|7     |LUT3             |   703|
+|8     |LUT4             |    74|
+|9     |LUT5             |   412|
+|10    |LUT6             |  2827|
+|11    |MUXF7            |   816|
+|12    |MUXF8            |   384|
+|13    |FDCE             |  2491|
+|14    |FDRE             |   218|
+|15    |FDSE             |     9|
+|16    |IBUF             |     3|
+|17    |OBUF             |    15|
++------+-----------------+------+
 
 Report Instance Areas: 
 +------+--------------------------+------------+------+
 |      |Instance                  |Module      |Cells |
 +------+--------------------------+------------+------+
-|1     |top                       |            | 14414|
-|2     |  my_vga                  |vga         |  6108|
-|3     |  rstn_debounce           |debounce    |    83|
-|4     |  test_cache              |cache       |   103|
-|5     |  test_clk                |slow_clk    |    89|
-|6     |  test_cpu                |mycpu_top   |  4913|
-|7     |    cpu_regfile           |regfile     |  1920|
-|8     |    cpu_pc                |PC          |    41|
-|9     |    cpu_pre_read          |pre_read    |    37|
-|10    |    d_e                   |D_E         |  1093|
-|11    |    e_m                   |E_M         |  1223|
-|12    |    f_d                   |F_D         |   266|
-|13    |    jal_mux_addr          |jal_mux_5   |     5|
-|14    |    jal_mux_data          |jal_mux_32  |    63|
-|15    |    m_w                   |M_W         |    70|
-|16    |    mux_choos_ram_addr    |mux2_1_32   |    26|
-|17    |    mux_choose_alu_src    |mux2_1_32_0 |    32|
-|18    |    mux_choose_pc         |mux2_1_32_1 |    32|
-|19    |    mux_choose_rd1        |mux2_1_32_2 |    32|
-|20    |    mux_choose_rd2        |mux2_1_32_3 |    32|
-|21    |    mux_choose_result_src |mux2_1_32_4 |    32|
-|22    |  test_ram                |RAM         |  2996|
+|1     |top                       |            |  8234|
+|2     |  rstn_debounce           |debounce    |    82|
+|3     |  test_cache              |cache       |   105|
+|4     |  test_clk                |slow_clk    |    85|
+|5     |  test_cpu                |mycpu_top   |  4901|
+|6     |    cpu_regfile           |regfile     |  1920|
+|7     |    cpu_pc                |PC          |    41|
+|8     |    cpu_pre_read          |pre_read    |    37|
+|9     |    d_e                   |D_E         |  1070|
+|10    |    e_m                   |E_M         |  1236|
+|11    |    f_d                   |F_D         |   266|
+|12    |    jal_mux_addr          |jal_mux_5   |     5|
+|13    |    jal_mux_data          |jal_mux_32  |    63|
+|14    |    m_w                   |M_W         |    70|
+|15    |    mux_choos_ram_addr    |mux2_1_32   |    24|
+|16    |    mux_choose_alu_src    |mux2_1_32_0 |    32|
+|17    |    mux_choose_pc         |mux2_1_32_1 |    32|
+|18    |    mux_choose_rd1        |mux2_1_32_2 |    32|
+|19    |    mux_choose_rd2        |mux2_1_32_3 |    32|
+|20    |    mux_choose_result_src |mux2_1_32_4 |    32|
+|21    |  test_ram                |RAM         |  2996|
 +------+--------------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1185.676 ; gain = 573.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 1338.762 ; gain = 594.555
-Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:29 . Memory (MB): peak = 1338.762 ; gain = 727.156
+Synthesis finished with 0 errors, 0 critical warnings and 85 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1185.676 ; gain = 446.223
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1185.676 ; gain = 573.785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1338.762 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1732 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1185.676 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1284 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1338.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1185.676 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-175 Infos, 149 Warnings, 0 Critical Warnings and 0 Errors encountered.
+170 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:34 . Memory (MB): peak = 1338.762 ; gain = 999.539
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1338.762 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:49 . Memory (MB): peak = 1185.676 ; gain = 847.168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1185.676 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/synth_2/cpu_vga_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cpu_vga_top_utilization_synth.rpt -pb cpu_vga_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Sep  5 16:34:18 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  5 22:13:04 2023...

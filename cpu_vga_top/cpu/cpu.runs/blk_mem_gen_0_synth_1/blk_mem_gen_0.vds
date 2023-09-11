@@ -2,13 +2,17 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Sep  5 16:05:07 2023
-# Process ID: 22272
+# Start of session at: Tue Sep  5 22:12:04 2023
+# Process ID: 31204
 # Current directory: D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
 # Log file: D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
 # Journal file: D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/blk_mem_gen_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/4_th_year_bit/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/verilog/Vivado/2019.2/data/ip'.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP blk_mem_gen_0, cache-ID = 34a2c42034467f86.
-INFO: [Common 17-206] Exiting Vivado at Tue Sep  5 16:05:10 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  5 22:12:07 2023...

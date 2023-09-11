@@ -1,0 +1,192 @@
+<mxfile host="Electron" modified="2023-09-05T12:36:29.068Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="parHb4iLXV07g3Ke4hxv" version="21.6.8" type="device">
+  <diagram name="第 1 页" id="gY1yyO9XL-cIVTI6tsSe">
+    <mxGraphModel dx="1562" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-1" value="PC&lt;br&gt;choose&lt;br&gt;and&lt;br&gt;generate" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="80" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-2" value="1号&lt;br&gt;流水线&lt;br&gt;寄存器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="200" width="40" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pilpvh1FP9kKgKYsOdM9-1" target="Pilpvh1FP9kKgKYsOdM9-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="480" as="sourcePoint" />
+            <mxPoint x="440" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-4" value="控制器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="90" width="40" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-5" value="寄存器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-6" value="数据转发模块" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-7" value="2号&lt;br&gt;流水线&lt;br&gt;寄存器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="200" width="40" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-8" value="ALU" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="530" y="350" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-9" value="3号&lt;br&gt;流水线&lt;br&gt;寄存器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="200" width="40" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-10" value="RAM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="320" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-11" value="3号&lt;br&gt;流水线&lt;br&gt;寄存器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="200" width="40" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pilpvh1FP9kKgKYsOdM9-4" target="Pilpvh1FP9kKgKYsOdM9-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="165" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="165" as="sourcePoint" />
+            <mxPoint x="410" y="125" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="595" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="596" y="166" as="sourcePoint" />
+            <mxPoint x="656" y="116" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="840" y="166" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.12;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="390" as="sourcePoint" />
+            <mxPoint x="680" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.005;entryY=0.614;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="380" as="sourcePoint" />
+            <mxPoint x="770" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.02;entryY=0.452;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="380" as="sourcePoint" />
+            <mxPoint x="970" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.1;entryY=0.422;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="370" as="sourcePoint" />
+            <mxPoint x="490" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="480" as="sourcePoint" />
+            <mxPoint x="460" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="440" />
+              <mxPoint x="460" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="240" as="sourcePoint" />
+            <mxPoint x="260" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.005;entryY=0.584;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="370" as="sourcePoint" />
+            <mxPoint x="250" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1.1;exitY=0.459;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Pilpvh1FP9kKgKYsOdM9-7" target="Pilpvh1FP9kKgKYsOdM9-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="380" as="sourcePoint" />
+            <mxPoint x="570" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="390" as="sourcePoint" />
+            <mxPoint x="700" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="640" />
+              <mxPoint x="410" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="380" as="sourcePoint" />
+            <mxPoint x="990" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="940" y="660" />
+              <mxPoint x="350" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="640" as="sourcePoint" />
+            <mxPoint x="460" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-26" value="指令存储器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-27" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Pilpvh1FP9kKgKYsOdM9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="230" as="sourcePoint" />
+            <mxPoint x="80" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.15;entryY=1.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="380" as="sourcePoint" />
+            <mxPoint x="1040" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1040" y="380" />
+              <mxPoint x="1040" y="680" />
+              <mxPoint x="300" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.02;entryY=0.871;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="220" as="sourcePoint" />
+            <mxPoint x="250" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pilpvh1FP9kKgKYsOdM9-30" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Pilpvh1FP9kKgKYsOdM9-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="140" as="sourcePoint" />
+            <mxPoint x="290" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

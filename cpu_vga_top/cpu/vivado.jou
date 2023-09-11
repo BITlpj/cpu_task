@@ -2,15 +2,15 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Sep  3 17:23:07 2023
-# Process ID: 18988
-# Current directory: D:/thisyear/cpu_task/cpu_vga_top/cpu
-# Command line: vivado.exe D:\thisyear\cpu_task\cpu_vga_top\cpu\cpu.xpr
-# Log file: D:/thisyear/cpu_task/cpu_vga_top/cpu/vivado.log
-# Journal file: D:/thisyear/cpu_task/cpu_vga_top/cpu\vivado.jou
+# Start of session at: Tue Sep  5 22:11:37 2023
+# Process ID: 26796
+# Current directory: D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu
+# Command line: vivado.exe D:\4_th_year_bit\cpu_task\cpu_vga_top\cpu\cpu.xpr
+# Log file: D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/vivado.log
+# Journal file: D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.xpr
+open_project D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.xpr
 update_compile_order -fileset sources_1
 reset_run synth_2
 reset_run blk_mem_gen_0_synth_1
@@ -19,21 +19,10 @@ wait_on_run impl_2
 open_hw_manager
 connect_hw_server -allow_non_jtag
 open_hw_target
-set_property PROGRAM.FILE {D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/impl_2/cpu_vga_top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/impl_2/cpu_vga_top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/impl_2/cpu_vga_top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/thisyear/cpu_task/cpu_vga_top/cpu/cpu.runs/impl_2/cpu_vga_top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/4_th_year_bit/cpu_task/cpu_vga_top/cpu/cpu.runs/impl_2/cpu_vga_top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
